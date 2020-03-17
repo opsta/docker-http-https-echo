@@ -1,10 +1,10 @@
 Docker image which echoes various HTTP request properties back to client, as well as in docker logs. 
 
-![browser](https://raw.githubusercontent.com/mendhak/docker-http-https-echo/master/screenshots/screenshot.png)
+![browser](https://raw.githubusercontent.com/opsta/docker-http-https-echo/master/screenshots/screenshot.png)
 
 ## Usage
 
-    docker run -p 8080:80 -p 8443:443 --rm -t mendhak/http-https-echo
+    docker run -p 8080:8080 -p 8443:8443 --rm -t opsta/http-https-echo
 
 Then issue a request via your browser or curl -
 
@@ -17,7 +17,7 @@ Then issue a request via your browser or curl -
 You can substitute the certificate and private key with your own. This example uses the snakeoil cert.
 
     my-http-listener:
-        image: mendhak/http-https-echo
+        image: opsta/http-https-echo
         ports:
             - "8080:8080"
             - "8443:8443"
@@ -31,16 +31,16 @@ You can substitute the certificate and private key with your own. This example u
 
 #### Curl output
 
-![curl](https://raw.githubusercontent.com/mendhak/docker-http-https-echo/master/screenshots/screenshot2.png)
+![curl](https://raw.githubusercontent.com/opsta/docker-http-https-echo/master/screenshots/screenshot2.png)
 
 #### `docker logs` output
 
-![dockerlogs](https://raw.githubusercontent.com/mendhak/docker-http-https-echo/master/screenshots/screenshot3.png)
+![dockerlogs](https://raw.githubusercontent.com/opsta/docker-http-https-echo/master/screenshots/screenshot3.png)
 
 
 
 ## Building
 
-    docker build -t mendhak/http-https-echo .
+    docker build -t opsta/http-https-echo .
 
 
