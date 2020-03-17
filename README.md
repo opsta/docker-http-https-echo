@@ -19,8 +19,8 @@ You can substitute the certificate and private key with your own. This example u
     my-http-listener:
         image: mendhak/http-https-echo
         ports:
-            - "8080:80"
-            - "8443:443"
+            - "8080:8080"
+            - "8443:8443"
         volumes:
             - /etc/ssl/certs/ssl-cert-snakeoil.pem:/app/fullchain.pem
             - /etc/ssl/private/ssl-cert-snakeoil.key:/app/privkey.pem
